@@ -14,6 +14,8 @@ jobs:
       has_changes: ${{ steps.check_changes.outputs.has_changes }}
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.ref }}
       - id: append_date
         run: date >>data.txt
       - id: check_changes
@@ -26,3 +28,4 @@ jobs:
             data.txt
           commit-msg: "chore: append date to data.txt [skip ci]"
           github-token: ${{ secrets.WORKFLOW_TOKEN }}
+          branch: ${{ github.ref_name }}
