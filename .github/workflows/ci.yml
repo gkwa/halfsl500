@@ -16,6 +16,6 @@ jobs:
       - uses: test-room-7/action-update-file@8b811502e37e2dcf6e8f80c712cd81e735be6e1c # v1
         with:
           file-path: |
-            ./data.txt
+            data.txt
           commit-msg: "chore: append date to data.txt"
           github-token: ${{ secrets.WORKFLOW_TOKEN }}
