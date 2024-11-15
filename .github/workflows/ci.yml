@@ -23,6 +23,7 @@ jobs:
           git diff --quiet data.txt || echo "has_changes=true" >> $GITHUB_OUTPUT
       - if: steps.check_changes.outputs.has_changes == 'true'
         run: |
+          exit 1
           # Run validation on data.txt
           cat data.txt
           # Add additional validation as needed
