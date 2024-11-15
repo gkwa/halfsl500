@@ -1,5 +1,5 @@
 name: Build & Test
-"on":
+on:
   push:
     branches:
       - "*"
@@ -10,27 +10,14 @@ jobs:
   test:
     name: Build & Test
     runs-on: ubuntu-latest
-    outputs:
-      has_changes: ${{ steps.check_changes.outputs.has_changes }}
     steps:
-      - uses: actions/checkout@cbb722410c2e876e24abbe8de2cc27693e501dcb
-        with:
-          ref: ${{ github.ref }}
-      - id: append_date
-        run: date >>data.txt
-      - id: check_changes
-        run: |
-          git diff --quiet data.txt || echo "has_changes=true" >> $GITHUB_OUTPUT
-      - if: steps.check_changes.outputs.has_changes == 'true'
-        run: |
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - run: date >>data.txt
+      - run: |
           # Run validation on data.txt
           cat data.txt
-          # Add additional validation as needed
-      - if: steps.check_changes.outputs.has_changes == 'true'
-        uses: test-room-7/action-update-file@8b811502e37e2dcf6e8f80c712cd81e735be6e1c
+      - uses: EndBug/add-and-commit@v9
         with:
-          file-path: |
-            data.txt
-          commit-msg: "chore: append date to data.txt [skip ci]"
-          github-token: ${{ secrets.WORKFLOW_TOKEN }}
-          branch: ${{ github.ref_name }}
+          add: data.txt
+          message: "chore: append date to data.txt [skip ci]"
+          default_author: github_actions
