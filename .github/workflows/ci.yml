@@ -20,7 +20,7 @@ jobs:
       - run: date >>data.txt
       - run: |
           cat data.txt # placeholder for validation check
-      - uses: EndBug/add-and-commit@v9
+      - uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9
         with:
           add: .
           message: "chore: append date to data.txt [skip ci]"
