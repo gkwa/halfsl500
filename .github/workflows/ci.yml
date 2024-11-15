@@ -3,8 +3,6 @@ name: Build & Test
   push:
     branches:
       - "*"
-    paths-ignore:
-      - data.txt
   pull_request:
     branches:
       - "*"
@@ -19,5 +17,5 @@ jobs:
         with:
           file-path: |
             data.txt
-          commit-msg: "chore: append date to data.txt"
+          commit-msg: "chore: append date to data.txt [skip ci]"
           github-token: ${{ secrets.WORKFLOW_TOKEN }}
