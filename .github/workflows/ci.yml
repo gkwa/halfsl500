@@ -15,7 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@cbb722410c2e876e24abbe8de2cc27693e501dcb
         with:
-          token: ${{ secrets.WORKFLOW_TOKEN }}
           ref: ${{ github.head_ref || github.ref_name }}
       - run: date >>data.txt
       - run: |
