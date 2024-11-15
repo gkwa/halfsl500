@@ -14,22 +14,23 @@ jobs:
       has_changes: ${{ steps.check_changes.outputs.has_changes }}
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-      - run: date >>data.txt
+        with:
+          ref: ${{ github.ref }}
+      - id: append_date
+        run: date >>data.txt
       - id: check_changes
         run: |
           git diff --quiet data.txt || echo "has_changes=true" >> $GITHUB_OUTPUT
-  push_changes:
-    needs: test
-    if: needs.test.outputs.has_changes == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-      - run: |
-          # Run any validation here
+      - if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          # Run validation on data.txt
           cat data.txt
-      - uses: test-room-7/action-update-file@8b811502e37e2dcf6e8f80c712cd81e735be6e1c
+          # Add additional validation as needed
+      - if: steps.check_changes.outputs.has_changes == 'true'
+        uses: test-room-7/action-update-file@8b811502e37e2dcf6e8f80c712cd81e735be6e1c
         with:
           file-path: |
             data.txt
           commit-msg: "chore: append date to data.txt [skip ci]"
           github-token: ${{ secrets.WORKFLOW_TOKEN }}
+          branch: ${{ github.ref_name }}
