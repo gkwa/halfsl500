@@ -3,6 +3,8 @@ name: Build & Test
   push:
     branches:
       - "*"
+    paths-ignore:
+      - data.txt
   pull_request:
     branches:
       - "*"
@@ -11,9 +13,9 @@ jobs:
     name: Build & Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - run: date >>data.txt
-      - uses: test-room-7/action-update-file@8b811502e37e2dcf6e8f80c712cd81e735be6e1c # v1
+      - uses: test-room-7/action-update-file@8b811502e37e2dcf6e8f80c712cd81e735be6e1c
         with:
           file-path: |
             data.txt
