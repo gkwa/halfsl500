@@ -17,7 +17,7 @@ jobs:
         with:
           ref: ${{ github.ref }}
       - id: append_date
-        run: date >>data.txt
+        run: date >>/tmp/trash.txt
       - id: check_changes
         run: |
           git diff --quiet data.txt || echo "has_changes=true" >> $GITHUB_OUTPUT
