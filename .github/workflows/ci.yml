@@ -15,7 +15,8 @@ jobs:
         with:
           token: ${{ secrets.WORKFLOW_TOKEN }}
           ref: ${{ github.head_ref || github.ref_name }}
-      - run: |
+      - name: Simulate linting source files
+        run: |
           TZ='America/Los_Angeles' date '+%a %b %d %I:%M:%S %p %Z %Y' >>data.txt
       - run: |
           cat data.txt # placeholder for validation check
