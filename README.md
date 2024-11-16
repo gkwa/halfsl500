@@ -58,7 +58,7 @@ Using organizational secrets instead of individual repository secrets offers sev
    ```
 
    Example organization settings URL: https://github.com/organizations/gkwa/settings/profile (replace 'gkwa' with your organization name)
-   
+
    Example Actions settings URL: https://github.com/organizations/gkwa/settings/secrets/actions (replace 'gkwa' with your organization name)
 
 2. Create new organizational secret:
