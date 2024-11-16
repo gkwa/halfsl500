@@ -58,7 +58,11 @@ Using organizational secrets instead of individual repository secrets offers sev
 Navigate to the token creation page:
 
 ```
-Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token (classic)
+Settings
+→ Developer settings
+→ Personal access tokens
+→ Tokens (classic)
+→ Generate new token (classic)
 
 Direct URL: https://github.com/settings/tokens
 ```
@@ -72,7 +76,12 @@ Direct URL: https://github.com/settings/tokens
 Navigate to organization secrets:
 
 ```
-Your profile → Your organizations → [Organization name] → Settings → Secrets and variables → Actions
+Your profile
+→ Your organizations
+→ [Organization name]
+→ Settings
+→ Secrets and variables
+→ Actions
 
 Direct URL: https://github.com/organizations/[org-name]/settings/secrets/actions
 ```
