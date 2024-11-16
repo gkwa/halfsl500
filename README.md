@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-1. Create a Github organization and make your account a member of it
+1. Create a Github organization and make your Github personal account a member of it
 1. Create personal access token at https://github.com/settings/tokens
 1. Create organizational secret `WORKFLOW_TOKEN` with the token value
 1. Create repository
@@ -36,7 +36,7 @@ Using organizational secrets instead of individual repository secrets offers sev
    8. Click "Generate new token (classic)" item
    ```
 2. Create a new token named `WORKFLOW_TOKEN`
-   (Your token will have format similar to this: `ghp_npXyyg50n1taucGKq1YGLvrEChfzz71Hnl32`)
+   (Your token will have format similar to `ghp_npXyyg50n1taucGKq1YGLvrEChfzz71Hnl32`)
 3. Required `WORKFLOW_TOKEN` permissions: TBD (to be documented in next update)
 
 ### 2. Configure Organization Secret
@@ -62,7 +62,7 @@ Using organizational secrets instead of individual repository secrets offers sev
 
 2. Create new organizational secret:
    - Name: `WORKFLOW_TOKEN`
-   - Value: (paste your token that has format similar to this: `ghp_npXyyg50n1taucGKq1YGLvrEChfzz71Hnl32`)
+   - Value: (paste your token that has format similar to `ghp_npXyyg50n1taucGKq1YGLvrEChfzz71Hnl32`)
 
 ### 3. Configure GitHub Actions
 
