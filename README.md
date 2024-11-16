@@ -58,13 +58,13 @@ Using organizational secrets instead of individual repository secrets offers sev
 1. Navigate to https://github.com/settings/tokens using these steps:
    ```
    1. Login to GitHub
-   1. Click on your profile picture
-   1. Click the Settings link
-   1. Click "Developer settings" link (bottom of left sidebar)
-   1. Click "Personal access tokens" dropdown
-   1. Click "Tokens (classic)" item
-   1. Click "Generate new token" combo box
-   1. Click "Generate new token (classic)" item
+   2. Click on your profile picture
+   3. Click the Settings link
+   4. Click "Developer settings" link (bottom of left sidebar)
+   5. Click "Personal access tokens" dropdown
+   6. Click "Tokens (classic)" item
+   7. Click "Generate new token" combo box
+   8. Click "Generate new token (classic)" item
    ```
 2. Create a new token named `WORKFLOW_TOKEN`
    (Your token will have format similar to `ghp_npXyyg50n1taucGKq1YGLvrEChfzz71Hnl32`)
@@ -76,13 +76,15 @@ Using organizational secrets instead of individual repository secrets offers sev
 
    ```
    1. Login to GitHub
-   1. Click on your profile picture
-   1. Click "Your organizations" link
-   1. Click on your organization name link
-   1. Click Settings link (Example URL: https://github.com/organizations/gkwa/settings/1. file)
-   1. Click "Secrets and variables" link
-   1. Click "Actions" link (Example URL: https://github.com/organizations/gkwa/settings/1. rets/actions)
-   1. Click "New organization secret" button
+   2. Click on your profile picture
+   3. Click "Your organizations" link
+   4. Click on your organization name link
+   5. Click Settings link
+      (Example URL: https://github.com/organizations/gkwa/settings/profile)
+   6. Click "Secrets and variables" link
+   7. Click "Actions" link
+      (Example URL: https://github.com/organizations/gkwa/settings/secrets/actions)
+   8. Click "New organization secret" button
    ```
 
    Example organization settings URL: https://github.com/organizations/gkwa/settings/profile (replace 'gkwa' with your organization name)
