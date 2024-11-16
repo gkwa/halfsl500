@@ -89,7 +89,8 @@ jobs:
         with:
           token: ${{ secrets.WORKFLOW_TOKEN }}
           ref: ${{ github.head_ref || github.ref_name }}
-      - run: date >>data.txt
+      - run: |
+          date >>data.txt # arbitrary change to ensure our change is pushed back to repo
       - run: |
           cat data.txt # placeholder for validation check
       - uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9
