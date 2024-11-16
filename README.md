@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-1. Create an organization and make your account a member of it
+1. Create a Github organization and make your account a member of it
 1. Create personal access token at https://github.com/settings/tokens
 1. Create organizational secret `WORKFLOW_TOKEN` with the token value
 1. Create repository
