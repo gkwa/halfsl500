@@ -98,7 +98,7 @@ jobs:
           github_token: ${{ secrets.WORKFLOW_TOKEN }}
 ```
 
-Note that we include `[skip ci]` in the commit message to prevent an infinite loop of workflow runs:
+Note that we include `[skip ci]` in the commit message to prevent an infinite loop of workflow runs.
 
 Uses `EndBug`'s `add-and-commit` github action:
 https://github.com/EndBug/add-and-commit?tab=readme-ov-file#add--commit
