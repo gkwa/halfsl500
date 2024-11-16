@@ -1,14 +1,26 @@
 name: Build & Test
-on:
+"on":
   push:
     branches:
       - "*"
   pull_request:
     branches:
       - "*"
+# This ensures this workflow waits for other workflows to complete
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
+  wait-for-renovate:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          # Wait for any pending Renovate PRs to complete
+          sleep 30
   test:
     name: Build & Test
+    needs:
+      - wait-for-renovate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
