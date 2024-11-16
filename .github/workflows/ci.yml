@@ -20,7 +20,7 @@ jobs:
     steps:
       - run: |
           # Wait for any pending Renovate PRs to complete
-          sleep 10
+          sleep 30s
   test:
     name: Build & Test
     needs:
