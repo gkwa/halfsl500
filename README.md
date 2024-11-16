@@ -12,7 +12,7 @@ Maybe installing/maintaining them on github image using CI is better than mainta
 
 Ok, so If i want all the linters on remote github runner then I should allow the runner to update my code with all the linters's fixes.
 
-So, here I fumbled my way through getting github actions to commit to my repo and its simple in hindsight, but fiding the right steps was time consuing.
+So, here I fumbled my way through getting github actions to commit to my repo and its simple in hindsight (create a personal access token and provide it as a secret in the repo), but arriving to this conclusion was time consuing.
 
 ## TL;DR
 
