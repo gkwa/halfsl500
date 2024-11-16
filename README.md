@@ -10,6 +10,8 @@ So maybe its best to install all the linter's myself. Maybe installing/maintaini
 
 Ok, so If i want all the linters on remote github runner then I should allow the runner to update my code with all the linters's fixes.
 
+So, here I fumbled my way through getting github actions to commit to my repo and its simple in hindsight, but fiding the right steps was time consuing.
+
 ## TL;DR
 
 1. Create a token under personal account from https://github.com/settings/tokens, name it `WORKFLOW_TOKEN` (for example). Assume the token's value is `ghp_npXyyg50n1taucGKq1YGLvrEChfzz71Hnl32`
