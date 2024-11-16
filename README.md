@@ -1,5 +1,36 @@
 # Enabling GitHub Actions Bot to Modify Your Repository
 
+## Motivation
+
+Setting up GitHub Actions to automatically modify your repository is particularly valuable for maintaining code quality and consistency:
+
+1. **Automated Code Cleanup**: Instead of manually running formatters and linters locally, GitHub Actions can automatically:
+
+   - Format code according to team style guidelines
+   - Fix common linting issues
+   - Ensure consistent documentation formatting
+   - Clean up whitespace and line endings
+
+2. **Consistent Standards**:
+
+   - Every PR gets the same treatment
+   - No more debates about code style in code reviews
+   - Eliminates human error in formatting
+   - Ensures all contributors follow the same standards, regardless of their local setup
+
+3. **Time Savings**:
+
+   - Developers don't need to manually run formatters
+   - Code reviewers can focus on logic instead of style
+   - Reduces back-and-forth in PRs about formatting issues
+   - Automated commits handle routine cleanup tasks
+
+4. **Better Developer Experience**:
+   - Immediate feedback on style issues
+   - No need to remember all formatting rules
+   - Reduces cognitive load during development
+   - Learn better practices through automated fixes
+
 ## TL;DR
 
 1. Create a Github organization and make your Github personal account a member of it
