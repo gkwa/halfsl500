@@ -88,7 +88,7 @@ jobs:
           github_token: ${{ secrets.WORKFLOW_TOKEN }}
 ```
 
-Uses Github Action:
+Uses `EndBug`'s `add-and-commit` github action:
 https://github.com/EndBug/add-and-commit?tab=readme-ov-file#add--commit
 
 ### 4. Testing the Setup
