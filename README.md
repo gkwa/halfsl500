@@ -9,7 +9,7 @@
 5. Test with: `git commit --allow-empty -m "trigger build" && git push`
 6. Verify with `git pull` to see `github-actions[bot]`'s commit
 
-## Why Use Organization Secrets?
+## Why Use Organization Secrets instead of personal account secrets?
 
 Using organizational secrets instead of individual repository secrets offers several advantages:
 
