@@ -2,12 +2,13 @@
 
 ## TL;DR
 
+1. Create an organization and make your account a member of it
 1. Create personal access token at https://github.com/settings/tokens
-2. Create organizational secret `WORKFLOW_TOKEN` with the token value
-3. Create repository
-4. Add `.github/workflows/ci.yml` (example below)
-5. Test with: `git commit --allow-empty -m "trigger build" && git push`
-6. Verify with `git pull` to see `github-actions[bot]`'s commit
+1. Create organizational secret `WORKFLOW_TOKEN` with the token value
+1. Create repository
+1. Add `.github/workflows/ci.yml` (example below)
+1. Test with: `git commit --allow-empty -m "trigger build" && git push`
+1. Verify with `git pull` to see `github-actions[bot]`'s commit
 
 ## Why Use Organization Secrets instead of personal account secrets?
 
