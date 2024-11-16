@@ -55,45 +55,32 @@ Using organizational secrets instead of individual repository secrets offers sev
 
 ### 1. Create Personal Access Token
 
-1. Navigate to https://github.com/settings/tokens using these steps:
-   ```
-   1. Login to GitHub
-   2. Click on your profile picture
-   3. Click the Settings link
-   4. Click "Developer settings" link (bottom of left sidebar)
-   5. Click "Personal access tokens" dropdown
-   6. Click "Tokens (classic)" item
-   7. Click "Generate new token" combo box
-   8. Click "Generate new token (classic)" item
-   ```
-2. Create a new token named `WORKFLOW_TOKEN`
+Navigate to the token creation page:
+
+```
+Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token (classic)
+
+Direct URL: https://github.com/settings/tokens
+```
+
+1. Create a new token named `WORKFLOW_TOKEN`
    (Your token will have format similar to `ghp_npXyyg50n1taucGKq1YGLvrEChfzz71Hnl32`)
-3. Required `WORKFLOW_TOKEN` permissions: TBD (to be documented in next update)
+2. Required `WORKFLOW_TOKEN` permissions: TBD (to be documented in next update)
 
 ### 2. Configure Organization Secret
 
-1. Navigate to your organization settings using these steps:
+Navigate to organization secrets:
 
-   ```
-   1. Login to GitHub
-   2. Click on your profile picture
-   3. Click "Your organizations" link
-   4. Click on your organization name link
-   5. Click Settings link
-      (Example URL: https://github.com/organizations/gkwa/settings/profile)
-   6. Click "Secrets and variables" link
-   7. Click "Actions" link
-      (Example URL: https://github.com/organizations/gkwa/settings/secrets/actions)
-   8. Click "New organization secret" button
-   ```
+```
+Your profile → Your organizations → [Organization name] → Settings → Secrets and variables → Actions
 
-   Example organization settings URL: https://github.com/organizations/gkwa/settings/profile (replace 'gkwa' with your organization name)
+Direct URL: https://github.com/organizations/[org-name]/settings/secrets/actions
+```
 
-   Example Actions settings URL: https://github.com/organizations/gkwa/settings/secrets/actions (replace 'gkwa' with your organization name)
+Create new organizational secret:
 
-2. Create new organizational secret:
-   - Name: `WORKFLOW_TOKEN`
-   - Value: (paste your token that has format similar to `ghp_npXyyg50n1taucGKq1YGLvrEChfzz71Hnl32`)
+- Name: `WORKFLOW_TOKEN`
+- Value: (paste your token that has format similar to `ghp_npXyyg50n1taucGKq1YGLvrEChfzz71Hnl32`)
 
 ### 3. Configure GitHub Actions
 
