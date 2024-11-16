@@ -6,11 +6,8 @@ name: Build & Test
   pull_request:
     branches:
       - "*"
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: false
 jobs:
-  wait-for-renovate:
+  test:
     name: Build & Test
     strategy:
       matrix:
@@ -18,16 +15,7 @@ jobs:
           - ubuntu-latest
     runs-on: ${{ matrix.os }}
     steps:
-      - run: |
-          # Wait for any pending Renovate PRs to complete
-          sleep 30s
-  test:
-    name: Build & Test
-    needs:
-      - wait-for-renovate
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/checkout@v4
         with:
           token: ${{ secrets.WORKFLOW_TOKEN }}
           ref: ${{ github.head_ref || github.ref_name }}
