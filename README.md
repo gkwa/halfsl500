@@ -88,7 +88,7 @@ jobs:
 ```
 
 Uses Github Action:
-[GitHub - EndBug/add-and-commit: :octocat: Automatically commit changes made in your workflow run directly to your repo](https://github.com/EndBug/add-and-commit?tab=readme-ov-file#add--commit)
+https://github.com/EndBug/add-and-commit?tab=readme-ov-file#add--commit
 
 ### 4. Testing the Setup
 
