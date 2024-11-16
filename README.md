@@ -78,7 +78,7 @@ Navigate to organization secrets:
 ```
 Your profile
 → Your organizations
-→ [Organization name]
+→ [Organization name] link
 → Settings
 → Secrets and variables
 → Actions
