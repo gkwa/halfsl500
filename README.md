@@ -4,7 +4,7 @@
 
 When I started using [golangci-lint](https://github.com/golangci/golangci-lint), I found my code violates [WSL](https://github.com/bombsimon/wsl) suggestions among others of course.
 
-I [learned](https://github.com/bombsimon/wsl/tree/c862f085c18f8560c5aa50183cb4fbb9a11656c3?tab=readme-ov-file#usage) that I can't use WSL's `--fix` functionality through golangci-lint. According to WSL's documentation, this means if I want automatic fixes for WSL's suggestions, I have to install WSL as a standalone tool.
+I learned from [here](https://github.com/bombsimon/wsl/tree/c862f085c18f8560c5aa50183cb4fbb9a11656c3?tab=readme-ov-file#usage) that I can't use WSL's `--fix` functionality through golangci-lint. According to WSL's documentation, this means if I want automatic fixes for WSL's suggestions, I have to install WSL as a standalone tool.
 
 So maybe its best to install all the linter's myself, perhaps they all have one-off quirks like this that prevents golangci-lint to cleanup my code.
 
@@ -146,6 +146,7 @@ You can see more examples of successful bot commits in the [example repository](
 
 ### Todo
 
+- This generates conflicts often shen using renovate too since they're both updating same files at once, nee to search for workaround. To reporduce, change this `EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9` to this `EndBug/add-and-commit@v9` for example and observe conflict in pull request.
 - Document specific token permissions needed
 - Add troubleshooting section
 - Add security considerations
