@@ -2,42 +2,21 @@
 
 ## Motivation
 
-Setting up GitHub Actions to automatically modify your repository is particularly valuable for maintaining code quality and consistency:
+When I started using [golangci-lint](https://github.com/golangci/golangci-lint), I found my code violates [WSL](https://github.com/bombsimon/wsl) suggestions.
 
-1. **Automated Code Cleanup**: Instead of manually running formatters and linters locally, GitHub Actions can automatically:
+I learned that I can't use WSL's [`--fix`](https://github.com/bombsimon/wsl/tree/c862f085c18f8560c5aa50183cb4fbb9a11656c3?tab=readme-ov-file#usage) functionality through golangci-lint. According to WSL's documentation, this means if I want automatic fixes for WSL's suggestions, I have to install WSL as a standalone tool.
 
-   - Format code according to team style guidelines
-   - Fix common linting issues
-   - Ensure consistent documentation formatting
-   - Clean up whitespace and line endings
+This suggests that while golangci-lint can identify issues through its various linters, it won't provide the auto-fix functionality that standalone linters offer.
 
-2. **Consistent Standards**:
-
-   - Every PR gets the same treatment
-   - No more debates about code style in code reviews
-   - Eliminates human error in formatting
-   - Ensures all contributors follow the same standards, regardless of their local setup
-
-3. **Time Savings**:
-
-   - Developers don't need to manually run formatters
-   - Code reviewers can focus on logic instead of style
-   - Reduces back-and-forth in PRs about formatting issues
-   - Automated commits handle routine cleanup tasks
-
-4. **Better Developer Experience**:
-   - Immediate feedback on style issues
-   - No need to remember all formatting rules
-   - Reduces cognitive load during development
-   - Learn better practices through automated fixes
+Therefore, it might be worth investing time to install all the linters manually instead of relying solely on golangci-lint.
 
 ## TL;DR
 
-1. Create a Github organization and make your Github personal account a member of it
-1. Create personal access token at https://github.com/settings/tokens
-1. Create organizational secret `WORKFLOW_TOKEN` with the token value
+1. Create a token under personal account from https://github.com/settings/tokens, name it `WORKFLOW_TOKEN` (for example). Assume the token's value is `ghp_npXyyg50n1taucGKq1YGLvrEChfzz71Hnl32`
+1. Create a GitHub org and add your personal account to it
+1. Create org level secret with name `WORKFLOW_TOKEN` and value `ghp_npXyyg50n1taucGKq1YGLvrEChfzz71Hnl32`
 1. Create repository
-1. Add `.github/workflows/ci.yml` (example below)
+1. Add `.github/workflows/ci.yml`
 1. Test with: `git commit --allow-empty -m "trigger build" && git push`
 1. Verify with `git pull` to see `github-actions[bot]`'s commit
 
