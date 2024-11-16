@@ -27,7 +27,7 @@ jobs:
       - wait-for-renovate
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/checkout@v4
         with:
           token: ${{ secrets.WORKFLOW_TOKEN }}
           ref: ${{ github.head_ref || github.ref_name }}
@@ -37,7 +37,7 @@ jobs:
       - name: Simulate testing the change
         run: |
           cat data.txt # placeholder for validation check
-      - uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5
+      - uses: EndBug/add-and-commit@43eaafb140bdacd4907fa7384fdd5cd271f58171
         with:
           add: .
           message: "chore: append date to data.txt [skip ci]"
