@@ -6,7 +6,7 @@ When I started using [golangci-lint](https://github.com/golangci/golangci-lint),
 
 I learned from [here](https://github.com/bombsimon/wsl/tree/c862f085c18f8560c5aa50183cb4fbb9a11656c3?tab=readme-ov-file#usage) that I can't use WSL's `--fix` functionality through golangci-lint. According to WSL's documentation, this means if I want automatic fixes for WSL's suggestions, I have to install WSL as a standalone tool.
 
-So maybe its best to install all the linter's myself, perhaps they all have one-off quirks like this that prevents golangci-lint to cleanup my code.
+So maybe its best to install all the golangci-lint linter's myself, perhaps they all have one-off quirks like this that prevents golangci-lint to cleanup my code.
 
 Maybe installing/maintaining them on github image using CI is better than maintainining them on my laptop.
 
