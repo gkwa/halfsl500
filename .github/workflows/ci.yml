@@ -6,17 +6,21 @@ name: Build & Test
   pull_request:
     branches:
       - "*"
-# This ensures this workflow waits for other workflows to complete
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 jobs:
   wait-for-renovate:
-    runs-on: ubuntu-latest
+    name: Build & Test
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - run: |
           # Wait for any pending Renovate PRs to complete
-          sleep 30
+          sleep 10
   test:
     name: Build & Test
     needs:
@@ -33,7 +37,7 @@ jobs:
       - name: Simulate testing the change
         run: |
           cat data.txt # placeholder for validation check
-      - uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9
+      - uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5
         with:
           add: .
           message: "chore: append date to data.txt [skip ci]"
