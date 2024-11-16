@@ -16,11 +16,9 @@ Using organizational secrets instead of individual repository secrets offers sev
 
 1. **Centralized Secret Management**: Organization secrets can be shared across all repositories within the organization, eliminating the need to manually copy and paste the `WORKFLOW_TOKEN` for each new repository.
 
-2. **Consistency**: All repositories in the organization can use the same token, ensuring consistent access levels and reducing configuration errors.
-
-3. **Maintenance**: When you need to rotate or update the token, you only need to update it in one place (the organization settings) rather than updating it in each repository individually.
-
-4. **Access Control**: Organization administrators can control which repositories have access to the secrets, providing better security management.
+1. **Consistency**: All repositories in the organization can use the same token, ensuring consistent access levels and reducing configuration errors.
+1. **Maintenance**: When you need to rotate or update the token, you only need to update it in one place (the organization settings) rather than updating it in each repository individually.
+1. **Access Control**: Organization administrators can control which repositories have access to the secrets, providing better security management.
 
 ## Detailed Guide
 
