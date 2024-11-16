@@ -68,8 +68,6 @@ Using organizational secrets instead of individual repository secrets offers sev
 
 Create `.github/workflows/ci.yml` with the following content. This example uses the Github Action [EndBug/add-and-commit](https://github.com/EndBug/add-and-commit?tab=readme-ov-file#add--commit) to handle the commit process.
 
-Note that we include `[skip ci]` in the commit message to prevent an infinite loop of workflow runs:
-
 ```yaml
 name: Build & Test
 on:
@@ -99,6 +97,8 @@ jobs:
           default_author: github_actions
           github_token: ${{ secrets.WORKFLOW_TOKEN }}
 ```
+
+Note that we include `[skip ci]` in the commit message to prevent an infinite loop of workflow runs:
 
 Uses `EndBug`'s `add-and-commit` github action:
 https://github.com/EndBug/add-and-commit?tab=readme-ov-file#add--commit
