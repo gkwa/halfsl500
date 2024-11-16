@@ -40,15 +40,16 @@ Using organizational secrets instead of individual repository secrets offers sev
 
 Navigate to the token creation page:
 
+https://github.com/settings, then:
+
 ```
-Settings
 → Developer settings
 → Personal access tokens
 → Tokens (classic)
 → Generate new token (classic)
+```
 
 Direct URL: https://github.com/settings/tokens
-```
 
 1. Create a new token named `WORKFLOW_TOKEN`
    (Your token will have format similar to `ghp_npXyyg50n1taucGKq1YGLvrEChfzz71Hnl32`)
