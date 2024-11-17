@@ -146,7 +146,7 @@ You can see more examples of successful bot commits in the [example repository](
 
 ### Todo
 
-- This generates conflicts often shen using renovate too since they're both updating same files at once, nee to search for workaround. To reporduce, change this `EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9` to this `EndBug/add-and-commit@v9` for example and observe conflict in pull request.
+- This generates conflicts often when using renovate too since they're both updating same files at once, nee to search for workaround. To reporduce, change this `EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5 # v9` to this `EndBug/add-and-commit@v9` for example and observe conflict in pull request.
 - Document specific token permissions needed
 - Add troubleshooting section
 - Add security considerations
