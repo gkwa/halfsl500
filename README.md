@@ -77,7 +77,7 @@ Create new organizational secret:
 
 ### 3. Configure GitHub Actions
 
-Create `.github/workflows/ci.yml` with the following content. This example uses `EndBug`'s [Add & Commit](https://github.com/marketplace/actions/add-commit) Github action to handle the commit process.
+Create `.github/workflows/ci.yml` with the following content. This example uses [Federico Grandi's](https://github.com/EndBug) [Add & Commit](https://github.com/marketplace/actions/add-commit) Github action to handle the commit process.
 
 ```yaml
 name: Build & Test
